@@ -15,8 +15,7 @@ public class HistoricoMedico implements Model {
 	private boolean castrado;
 	private List<String> doencasCronicas;
 	private List<String> cirurgias;
-	private AnimalVacina animalVacina;
-	private AnimalVermifugo animalVermifugo;
+	private Animal animal;
 	
 	@Override
 	public Integer getId() {
@@ -39,12 +38,10 @@ public class HistoricoMedico implements Model {
 		return cirurgias;
 	}
 
-	public AnimalVacina getAnimalVacina() {
-		return animalVacina;
+	public Animal getAnimal() {
+		return animal;
 	}
 
-	public AnimalVermifugo getAnimalVermifugo() {
-		return animalVermifugo;
-	}
+	
 	
 }

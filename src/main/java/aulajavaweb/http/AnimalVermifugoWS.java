@@ -5,12 +5,15 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 
-@Path("endereco")
-public class EnderecoWS {
+import aulajavaweb.model.AnimalVermifugo;
+
+@Path("animalVermifugo")
+public class AnimalVermifugoWS {
+	
 	@Path("insert")
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void insert(){
-	
+	public void insert(AnimalVermifugo aniVerm){
+		
 	}
 }
