@@ -56,7 +56,7 @@ public class HistoricoMedicoWS {
 	public List<HistoricoMedico> findAll() {
 		HistoricoMedico h1 = new HistoricoMedico();
 		h1.setId(1);		
-	
+		
 
 		List<HistoricoMedico> hists = Arrays.asList(h1);
 
