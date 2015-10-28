@@ -56,14 +56,17 @@ public class TutorWS {
 		Tutor t1 = new Tutor();
 		t1.setId(1);
 		t1.setEmail("teste@teste.com");
-		t1.setNome("TesteNomeTutor");
-		
+		t1.setNome("TesteNomeTutor");	
 		
 		
 		List<Tutor> tutores = Arrays.asList(t1);
 
 		return tutores;
 	}
+	
+	@POST
+	@Path("update")
+	@Produces(MediaType.APPLICATION_JSON)
 
 	public void update() {
 

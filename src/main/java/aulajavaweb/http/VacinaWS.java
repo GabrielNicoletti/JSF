@@ -63,7 +63,9 @@ public class VacinaWS {
 
 		return Vacinaes;
 	}
-
+	@POST
+	@Path("update")
+	@Produces(MediaType.APPLICATION_JSON)
 	public void update() {
 
 	}

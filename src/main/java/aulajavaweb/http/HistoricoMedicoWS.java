@@ -64,9 +64,11 @@ public class HistoricoMedicoWS {
 
 		return hists;
 	}
+
 	@PUT
 	@Path ("update")
 	@Consumes(MediaType.APPLICATION_JSON)
+
 	public void update() {
 
 	}
