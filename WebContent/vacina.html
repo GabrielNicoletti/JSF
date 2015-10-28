@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		function sendData() {
+			var data = new FormData();
+			$('input').each(function(i, element) {
+				var attr = $('input')[i]; 
+				data.append(attr.name, attr.value);
+			})
+	
+		    $.ajax({
+		        url: '/rest/model/insert',
+		        type: 'POST',
+		        contentType: false,
+		        data: data,
+		        dataType: 'json'
+		    });
+		};
+	</script>
+	
+	
+    id: <input type="text" name="id"/><br/>
+    nome: <input type="text" name="nome"/><br/>
+    tipovacina: <input type="text" name="tipovacina"/><br/>
+    fabricantevacina: <input type="text" name="fabricantevacina"/><br/>
+    lote: <input type="text" name="lote"/><br/>
+    data: <input type="text" name="data"/><br/>
+    
+    
+    <button onclick="sendData()">Gravar</button>
+</body>
+</html>

@@ -5,6 +5,32 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<script>
+		function sendAnimal() {
+			var data = new FormData();
+			$('input').each(function(i, element) {
+				var attr = $('input')[i]; 
+				data.append(attr.name, attr.value);
+			})
+	
+		    $.ajax({
+		        url: '/rest/animal/insert',
+		        type: 'POST',
+		        contentType: false,
+		        data: data,
+		        dataType: 'json'
+		    });
+		};
+	</script>
 
+	Id: <input type="text" name="id"/><br/>
+    Castrado: <input type="text" name="castrado"/><br/>
+    DoencasCronicas: <input type="text" name="doencascronicas"/><br/>
+    Cirurgias: <input type="text" name="cirurgias"/><br/>
+    AnimalVacina: <input type="text" name="animalvacina"/><br/>
+    AnimalVermifugo: <input type="text" name="animalvermifugo"/><br/>    
+    
+    
+    <button onclick="sendAnimal()">Gravar</button>
 </body>
 </html>

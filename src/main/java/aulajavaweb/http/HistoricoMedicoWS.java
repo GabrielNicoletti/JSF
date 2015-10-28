@@ -2,23 +2,21 @@ package aulajavaweb.http;
 
 
 import javax.ws.rs.Path;
-
 import java.util.Arrays;
 import java.util.List;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.Path;
+
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
 import aulajavaweb.model.HistoricoMedico;
 
 @Path("historicomedico")
 public class HistoricoMedicoWS {
+
 
 	@POST
 	@Path("insert")
@@ -59,8 +57,6 @@ public class HistoricoMedicoWS {
 	public List<HistoricoMedico> findAll() {
 		HistoricoMedico h1 = new HistoricoMedico();
 		h1.setId(1);		
-	
-
 		List<HistoricoMedico> hists = Arrays.asList(h1);
 
 		return hists;
@@ -69,6 +65,7 @@ public class HistoricoMedicoWS {
 	public void update() {
 
 	}
+
 
 }
 
