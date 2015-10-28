@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastro Animal</title>
+</head>
+<body>
+	<script>
+		function sendAnimal() {
+			var data = new FormData();
+			$('input').each(function(i, element) {
+				var attr = $('input')[i]; 
+				data.append(attr.name, attr.value);
+			})
+	
+		    $.ajax({
+		        url: '/rest/animal/insert',
+		        type: 'POST',
+		        contentType: false,
+		        data: data,
+		        dataType: 'json'
+		    });
+		};
+	</script>
+
+	Id: <input type="text" name="id"/><br/>
+    Especie: <input type="text" name="especie"/><br/>
+    Raca: <input type="text" name="raca"/><br/>
+    Sexo: <input type="text" name="sexo"/><br/>
+    Meses: <input type="text" name="meses"/><br/>
+    Temperamento: <input type="text" name="temperamento"/><br/>
+    Pelagem: <input type="text" name="pelagem"/><br/>
+    Peso: <input type="text" name="peso"/><br/>
+    
+    <button onclick="sendAnimal()">Gravar</button>
+</body>
+</html>
