@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		function sendData() {
+			var data = new FormData();
+			$('input').each(function(i, element) {
+				var attr = $('input')[i]; 
+				data.append(attr.name, attr.value);
+			})
+	
+		    $.ajax({
+		        url: '/rest/model/insert',
+		        type: 'POST',
+		        contentType: false,
+		        data: data,
+		        dataType: 'json'
+		    });
+		};
+	</script>
+	
+	
+    id: <input type="text" name="id"/><br/>
+    datavencimento: <input type="text" name="datavencimento"/><br/>
+    tipovermifugo: <input type="text" name="tipovermifugo"/><br/>
+    fabricantevermifugo: <input type="text" name="fabricantevermifugo"/><br/>
+    
+    <button onclick="sendData()">Gravar</button>
+</body>
+</html>

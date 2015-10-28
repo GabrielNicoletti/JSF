@@ -12,28 +12,25 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import aulajavaweb.model.HistoricoMedico;
-
-@Path("historico")
-public class HistoricoMedicoWS {
-
-
+import aulajavaweb.model.Vacina;
+@Path("vacina")
+public class VacinaWS {
 	@POST
 	@Path("insert")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void insert(HistoricoMedico HistoricoMedico) throws ReflectiveOperationException {
-		//HistoricoMedicoService service = new HistoricoMedicoService();
-		//service.insert(HistoricoMedico);
+	public void insert(Vacina Vacina) throws ReflectiveOperationException {
+		//vacinaService service = new vacinaService();
+		//service.insert(vacina);
 	}
 
 	@GET
 	@Path("find/id{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public HistoricoMedico find(@PathParam("id") Integer id) {
-		List<HistoricoMedico> hists = findAll();
-		for (HistoricoMedico h1 : hists) {
-			if (h1.getId().equals(id)) {
-				return h1;
+	public Vacina find(@PathParam("id") Integer id) {
+		List<Vacina> Vacinaes = findAll();
+		for (Vacina v1 : Vacinaes) {
+			if (v1.getId().equals(id)) {
+				return v1;
 			}
 		}
 		return null;
@@ -42,7 +39,7 @@ public class HistoricoMedicoWS {
 	@GET
 	@Path("find/nome{nome}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public HistoricoMedico find(@PathParam("nome") String nome) {
+	public Vacina find(@PathParam("nome") String nome) {
 		return null;
 	}
 
@@ -54,19 +51,21 @@ public class HistoricoMedicoWS {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<HistoricoMedico> findAll() {
-		HistoricoMedico h1 = new HistoricoMedico();
-		h1.setId(1);		
+	public List<Vacina> findAll() {
+		Vacina v1 = new Vacina();
+		v1.setId(1);		
+		v1.setNome("TesteNomeVacina");
+		v1.setLote("testeLote");
 		
+		
+		
+		List<Vacina> Vacinaes = Arrays.asList(v1);
 
-		List<HistoricoMedico> hists = Arrays.asList(h1);
-
-		return hists;
+		return Vacinaes;
 	}
 
 	public void update() {
 
 	}
-
 
 }
