@@ -1,5 +1,8 @@
 package aulajavaweb.service;
 
-public class AnimalService {
+import aulajavaweb.model.Animal;
+import aulajavaweb.persistence.dao.AnimalDao;
+
+public class AnimalService extends Service<Animal, AnimalValidator<Animal>, AnimalDao<Animal>>{
 
 }
