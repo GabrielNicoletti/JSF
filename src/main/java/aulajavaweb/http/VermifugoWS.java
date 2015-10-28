@@ -62,6 +62,9 @@ public class VermifugoWS {
 		return Vermifugoes;
 	}
 
+	@POST
+	@Path("update")
+	@Produces(MediaType.APPLICATION_JSON)
 	public void update() {
 
 	}
