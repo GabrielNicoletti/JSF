@@ -1,8 +1,9 @@
 package aulajavaweb.model;
 
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.xml.bind.annotation.XmlRootElement;
 
 import aulajavaweb.model.enums.Especie;
 import aulajavaweb.model.enums.Raca;
@@ -10,11 +11,12 @@ import aulajavaweb.model.enums.Sexo;
 import aulajavaweb.model.enums.Temperamento;
 
 @Entity
-@XmlRootElement
+@ManagedBean
 public class Animal implements Model {
 	
 	@Id
 	private Integer id;
+	private String nome;
 	private Especie especie;
 	private Raca raca;
 	private Sexo sexo;
@@ -23,7 +25,13 @@ public class Animal implements Model {
 	private String pelagem;
 	// em gramas
 	private Integer peso;
+	
 	private HistoricoMedico historicoMedico;	
+	
+	@PostConstruct
+	public void post() {
+		nome = "nome";
+	}
 	
 	@Override
 	public Integer getId() {
@@ -33,7 +41,7 @@ public class Animal implements Model {
 	public Especie getEspecie() {
 		return especie;
 	}
-
+	
 	public void setEspecie(Especie especie) {
 		this.especie = especie;
 	}
@@ -96,6 +104,21 @@ public class Animal implements Model {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public Especie[] getEspecies(){
+			
+		return Especie.values();
+		
+		 
 	}
 	
 }
