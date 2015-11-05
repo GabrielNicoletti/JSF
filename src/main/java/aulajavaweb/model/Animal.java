@@ -1,5 +1,6 @@
 package aulajavaweb.model;
 
+import javax.faces.bean.ManagedBean;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -10,11 +11,13 @@ import aulajavaweb.model.enums.Sexo;
 import aulajavaweb.model.enums.Temperamento;
 
 @Entity
-@XmlRootElement
+//@XmlRootElement
+@ManagedBean
 public class Animal implements Model {
 	
 	@Id
 	private Integer id;
+	private String nome = "Digite o nome";
 	private Especie especie;
 	private Raca raca;
 	private Sexo sexo;
@@ -97,5 +100,20 @@ public class Animal implements Model {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 	
+	public Especie[] getEspecies(){
+		Especie[] list = new Especie[2];
+		for(int i = 1; i < 3; i++){
+			list[i-1] = Especie.getByCode(i);
+		}
+		return list;
+	}
 }

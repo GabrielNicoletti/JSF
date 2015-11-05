@@ -24,7 +24,11 @@ public enum Especie {
 		return description;
 	}
 	
-	public Especie getByCode(byte code) {
+	public static Especie getByCode(int code){
+		return getByCode((byte) code);
+	}
+	
+	public static Especie getByCode(byte code) {
 		for(Especie e : values()) {
 			if(e.code == code) return e; 
 		}
