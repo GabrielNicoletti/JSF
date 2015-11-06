@@ -5,6 +5,7 @@ import java.util.List;
 
 import aulajavaweb.model.Animal;
 
+
 public class AnimalDao implements Dao<Animal>{
 
 	private static AnimalDao dao;
@@ -32,34 +33,33 @@ public class AnimalDao implements Dao<Animal>{
 
 	@Override
 	public void inserir(Animal t) {
-		animais.add(t);
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void excluir(Animal t) {
-		animais.remove(t);
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public Animal buscar(Integer id) {
-
-		return animais.get(id);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public List<Animal> buscarTodos() {
-
-		return animais;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public void atualizar(Animal t) {
-		animais.remove(t);
-		animais.add(t);
+		// TODO Auto-generated method stub
 		
 	}
-	
-	
+
+
 }

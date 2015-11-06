@@ -2,6 +2,7 @@ package aulajavaweb.bean;
 
 import java.util.List;
 
+
 public interface Bean<T> {
 
 		public void inserir(T t);
@@ -14,5 +15,7 @@ public interface Bean<T> {
 		
 		public void atualizar(T t);
 		
-		
+
+	
+
 }

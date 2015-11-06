@@ -8,6 +8,7 @@ import aulajavaweb.dao.AnimalDao;
 import aulajavaweb.model.Animal;
 
 @ManagedBean
+
 public class AnimalBean implements Bean<Animal> {
 	
 	private Animal animal = new Animal ();	
@@ -34,8 +35,7 @@ public class AnimalBean implements Bean<Animal> {
 	}
 
 	@Override
-	public Animal buscar(Integer id) {
-		
+	public Animal buscar(Integer id) {		
 		return dao.buscar(id);
 	}
 

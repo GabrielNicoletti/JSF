@@ -15,5 +15,6 @@ public interface Dao<T extends Model>  {
 	public List<T> buscarTodos();
 	
 	public void atualizar(T t);
+
 	
 }
