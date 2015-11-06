@@ -12,7 +12,11 @@
 	    <welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 	
+<<<<<<< HEAD
 	<servlet>
+=======
+<servlet>
+>>>>>>> adc67b816830ce23975f025dd55cb3d233b46950
   		<servlet-name>FacesServlet</servlet-name>
   		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
   		<load-on-startup>1</load-on-startup>
@@ -21,5 +25,9 @@
   		<servlet-name>FacesServlet</servlet-name>
   		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> adc67b816830ce23975f025dd55cb3d233b46950
 </web-app>
