@@ -1,15 +1,19 @@
 package aulajavaweb.dao;
 
+import java.util.List;
+
 import aulajavaweb.model.Model;
 
 public interface Dao<T extends Model>  {
 
-	void insert(T t);
+	public void inserir(T t);
 	
-	void delete(T t) ;
+	public void excluir(T t);
 	
-	T find(Integer id);
+	public T buscar(Integer id);
 	
-	void update(T t);
+	public List<T> buscarTodos();
+	
+	public void atualizar(T t);
 	
 }

@@ -12,7 +12,7 @@ import aulajavaweb.model.enums.Temperamento;
 
 @Entity
 //@XmlRootElement
-@ManagedBean
+
 public class Animal implements Model {
 	
 	@Id
