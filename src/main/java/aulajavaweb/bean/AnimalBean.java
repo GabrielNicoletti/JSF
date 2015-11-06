@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
+import aulajavaweb.dao.AnimalDao;
 import aulajavaweb.model.Animal;
 
 @ManagedBean
@@ -21,27 +22,22 @@ public class AnimalBean implements Bean  <Animal>{
 	}
 	@Override
 	public void insert(Animal t) {
-		// TODO Auto-generated method stub
-		
+		AnimalDao.singleton().insert(t);		
 	}
 	@Override
 	public void delete(Animal t) {
-		// TODO Auto-generated method stub
-		
+		AnimalDao.singleton().delete(t);		
 	}
 	@Override
 	public Animal list(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return AnimalDao.singleton().list(id);
 	}
 	@Override
 	public List<Animal> listAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return AnimalDao.singleton().listAll();
 	}
 	@Override
 	public void update(Animal t) {
-		// TODO Auto-generated method stub
-		
+		AnimalDao.singleton().update(t);	
 	}
 }
