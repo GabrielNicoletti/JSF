@@ -1,11 +1,11 @@
-package aulajavaweb.dao;
+package aulajavaweb.bean;
 
 import java.util.List;
 
-import aulajavaweb.model.Model;
+import aulajavaweb.model.Animal;
 
-public interface Dao<T extends Model>  {
-
+public interface Bean <T> {
+	
 	public void insert(T t);
 	public void delete(T t);
 	public T list(Integer id);
