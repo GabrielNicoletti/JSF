@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:f="http://java.sun.com/jsf/core" 
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<title>Vacina</title>
+	
+</h:head>
+<h:body>
+	<h:form>
+		
+		<h:outputText value="#{vacinaBean.nome}"></h:outputText>	
+		<h:inputText value="#{vacinaBean.nome}"></h:inputText>
+		
+		<br/>
+		
+		<h:outputText for="tipovacina" values="TipoVacina: "></h:outputText>
+		<h:selectOneListbox id ="tipovacina" value="#{vacinaBean.tipoVacina}">
+			<f:selectItems value ="#{vacinaBean.tipoVacina}"
+			var= "tv"
+			itemLabel="#{tv.code}"
+			itemDescription="#{tv.description}"></f:selectItems>
+		</h:selectOneListbox>
+		
+	<!-- 	<h:outputText for="fabricanteVacina" values="Fabricante: "></h:outputText>
+		<h:selectOneListbox id ="fabricanteVacina" value="#{vacinaBean.fabricante}">
+			<f:selectItems value ="#{vacinaBean.fabricante}"
+			var= "f"
+			itemLabel="#{f.code}"
+			itemDescription="#{f.code}"></f:selectItems>
+		</h:selectOneListbox> -->
+			
+<!-- 			private Integer id;
+	private String nome;
+	private TipoVacina tipoVacina;
+	private FabricanteVacina fabricante;
+	private String lote;
+	private Date dataVencimento; -->
+        
+        
+        	
+<!-- 		Nome  -->
+<!-- 		<p:inputText  />  -->
+
+	</h:form>
+</h:body>
+</html>

@@ -2,9 +2,13 @@ package aulajavaweb.bean;
 
 import java.util.List;
 
+import javax.faces.bean.ManagedBean;
+
 import aulajavaweb.dao.VacinaDao;
 import aulajavaweb.model.Vacina;
-
+import aulajavaweb.model.enums.FabricanteVacina;
+import aulajavaweb.model.enums.TipoVacina;
+@ManagedBean
 public class VacinaBean  implements Bean<Vacina>{
 	
 
@@ -30,22 +34,31 @@ public class VacinaBean  implements Bean<Vacina>{
 	}
 	@Override
 	public void excluir(Vacina t) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	@Override
 	public Vacina buscar(Integer id) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	@Override
 	public List<Vacina> buscarTodos() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	@Override
 	public void atualizar(Vacina t) {
-		// TODO Auto-generated method stub
 		
+		
+	}
+	public TipoVacina[] getTipoVacina(){
+		return vacina.getTipoVacina().values();
+	}
+	public String getNome(){
+		return vacina.getNome();
+	}
+	public FabricanteVacina[] getFabricante(){
+		return vacina.getFabricante().values();
 	}
 }

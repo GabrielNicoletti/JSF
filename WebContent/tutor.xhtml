@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:f="http://java.sun.com/jsf/core" 
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<title>Tutor</title>
+	
+</h:head>
+<h:body>
+	<h:form>
+	
+		<h:outputText value="#{animal.nome}"></h:outputText>	
+		<h:inputText value="#{animal.nome}"></h:inputText>
+		
+		<br/>
+		
+		<h:selectOneListbox value="#{animal.especie}">
+			<f:selectItems value ="#{animal.especies}"></f:selectItems>
+		</h:selectOneListbox>
+			
+<!-- 		<p:outputLabel for="basic" value="SEXO:" />  -->
+<!-- 		<p:selectOneListbox id="basic" value="#{selectOneView.option}"> -->
+<!--             	<f:selectItem itemLabel="Macho" itemValue="1" /> -->
+<!--             	<f:selectItem itemLabel="Femea" itemValue="2" /> -->
+<!--             	<f:selectItem itemLabel="São Pauuuuuullooooooooo" itemValue="3" /> -->
+<!--         </p:selectOneListbox> -->
+        
+        
+        	
+<!-- 		Nome  -->
+<!-- 		<p:inputText  />  -->
+
+	</h:form>
+</h:body>
+</html>
