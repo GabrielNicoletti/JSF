@@ -14,13 +14,16 @@
 	<h:form>
 	
 		<h:outputText value="#{animal.nome}"></h:outputText>	
-		<h:inputText value="#{animal.nome}"></h:inputText>
-		
+		<h:inputText value="#{animal.nome}">
+			<f:validator validatorId="emailValidator"></f:validator> </h:inputText>		
 		<br/>
 		
 		<h:selectOneListbox value="#{animal.especie}">
 			<f:selectItems value ="#{animal.especies}"></f:selectItems>
 		</h:selectOneListbox>
+		
+		<h:outputText value="#{animal.nome}"></h:outputText>	
+		<h:inputText value="#{animal.nome}"></h:inputText>
 			
 <!-- 		<p:outputLabel for="basic" value="SEXO:" />  -->
 <!-- 		<p:selectOneListbox id="basic" value="#{selectOneView.option}"> -->
