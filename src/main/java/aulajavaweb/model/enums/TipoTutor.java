@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public enum TipoTutor {
 
 	PROPRIETARIO((byte) 1, "proprietario"),
-	TUTOR_ENTIDADE((byte) 2, "tipo de entidade");
+	TUTOR_ENTIDADE((byte) 2, "entidade");
 	
 	private byte code;
 	private String description;

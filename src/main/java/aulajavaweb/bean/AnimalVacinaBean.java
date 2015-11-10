@@ -2,8 +2,12 @@ package aulajavaweb.bean;
 
 import java.util.List;
 
+import javax.faces.bean.ManagedBean;
+
 import aulajavaweb.dao.AnimalVacinaDao;
 import aulajavaweb.model.AnimalVacina;
+
+@ManagedBean
 
 public class AnimalVacinaBean implements Bean<AnimalVacina>{
 	
