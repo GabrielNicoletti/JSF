@@ -1,41 +1,64 @@
 package aulajavaweb.bean;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
-import aulajavaweb.model.Tutor;
-import aulajavaweb.persistence.dao.TutorDao;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 
+import aulajavaweb.dao.TutorDao;
+import aulajavaweb.model.Endereco;
+import aulajavaweb.model.Tutor;
+import aulajavaweb.model.enums.TipoTutor;
+
+@ManagedBean
+@RequestScoped
 public class TutorBean implements Bean<Tutor>{
+
 	private Tutor tutor = new Tutor();
 	
-	@Override
-	public void inserir(Tutor t) {
-		// TODO Auto-generated method stub
-		
+	public TutorBean() {
 	}
-
-	@Override
-	public void excluir(Tutor t) {
-		// TODO Auto-generated method stub
-		
+	
+	public String inserir() {
+		TutorDao.singleton().inserir(tutor);
+		return "";
 	}
-
-	@Override
-	public Tutor buscar(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public Tutor getTutor() {
+		return tutor;
 	}
-
-	@Override
-	public List<Tutor> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public void setTutor(Tutor tutor) {
+		this.tutor = tutor;
 	}
-
-	@Override
-	public void atualizar(Tutor t) {
-		// TODO Auto-generated method stub
-		
+	
+	public TipoTutor[] getTipos() {
+		return TipoTutor.values();
 	}
-
+	
+	public List<Endereco> getEnderecos() {
+		List<Endereco> enderecos = new ArrayList<Endereco>();
+		for(int i = 0; i < 10; i++) {
+			Endereco e = new Endereco();
+			e.setId(i);
+			enderecos.add(e);
+		}
+		return enderecos;
+	}
+	
+	private List<Tutor> tutores = new ArrayList<Tutor>();
+	
+	public List<Tutor> getTutores() {
+		for(int i = 0; i < 10; i++) {
+			Tutor tutor = new Tutor();
+			tutor.setNome("tutor" + i);
+			tutor.setEmail("tutor" + i + "@a.a");
+			tutores.add(tutor);
+		}
+		return tutores;
+	}
+	
 }
+

@@ -6,37 +6,60 @@
 	  xmlns:ui="http://java.sun.com/jsf/facelets"
 	  xmlns:p="http://primefaces.org/ui">
 <h:head>
-
 	<title>Tutor</title>
-	
 </h:head>
 <h:body>
 	<h:form>
-	
-		<h:outputText value="#{animalBean.nome}"></h:outputText>	
-		<h:inputText value="#{animalBean.nome}">
-			<f:validator validatorId="emailValidator"></f:validator> </h:inputText>		
+
+		<h:outputText for="nome" value="Nome:"/>
+		<h:inputText id="nome" value="#{tutorBean.tutor.nome}"/>
 		<br/>
 		
-<!-- 		<h:selectOneListbox value="#{animal.especie}"> -->
-<!-- 			<f:selectItems value ="#{animal.especies}"></f:selectItems> -->
-<!-- 		</h:selectOneListbox> -->
+		<h:outputText for="telefone" value="Telefone:"/>
+		<h:inputText id="telefone" value="#{tutorBean.tutor.telefone}"/>
+		<br/>
 		
-<!-- 		<h:outputText value="#{animal.nome}"></h:outputText>	 -->
-<!-- 		<h:inputText value="#{animal.nome}"></h:inputText> -->
-			
-<!-- 		<p:outputLabel for="basic" value="SEXO:" />  -->
-<!-- 		<p:selectOneListbox id="basic" value="#{selectOneView.option}"> -->
-<!--             	<f:selectItem itemLabel="Macho" itemValue="1" /> -->
-<!--             	<f:selectItem itemLabel="Femea" itemValue="2" /> -->
-<!--             	<f:selectItem itemLabel="São Pauuuuuullooooooooo" itemValue="3" /> -->
-<!--         </p:selectOneListbox> -->
-        
-        
-        	
-<!-- 		Nome  -->
-<!-- 		<p:inputText  />  -->
-		<h:commandButton value="Cadastrar" action="#{vacinaBean.inserir}"></h:commandButton>
+		<h:outputText for="email" value="Email:"/>
+		<h:inputText id="email" value="#{tutorBean.tutor.email}">
+			<f:validator validatorId="emailValidator"></f:validator>
+		</h:inputText>
+		<br/>
+		
+		<h:message for="email"></h:message>
+		
+		<h:outputText for="endereco" value="Endereco:"/>
+		<h:selectOneMenu id="endereco" value="#{tutorBean.tutor.endereco}">
+   			<f:selectItems value="#{tutorBean.enderecos}" 
+   						   var="e"
+   						   itemLabel="#{e.id}"
+   						   itemValue="#{e.id}"/>
+   		</h:selectOneMenu>
+   		
+   		<h:outputText for="tipo" value="Tipo:"/>
+   		<h:selectOneMenu id="tipo" value="#{tutorBean.tutor.tipo}">
+   			<f:selectItems value="#{tutorBean.tipos}" 
+   						   var="e"
+   						   itemLabel="#{e.description}"
+   						   itemValue="#{e.code}"/>
+   		</h:selectOneMenu>
+		
+<!-- 		<h:dataTable value="#{tutorBean.tutores}" var="t" -->
+<!--     			styleClass="order-table" -->
+<!--     			headerClass="order-table-header" -->
+<!--     			rowClasses="order-table-odd-row, order-table-even-row"> -->
+   			
+<!--    			<h:column> -->
+<!--    				<f:facet name="header">Nome</f:facet>#{t.nome} -->
+<!--    			</h:column> -->
+   			
+<!--    			<h:column> -->
+<!--    				<f:facet name="header">Email</f:facet>#{t.email} -->
+<!--    			</h:column> -->
+   		
+<!--    		</h:dataTable> -->
+		
+		<h:commandButton value="inserir" action="#{tutorBean.inserir}"/>
+
 	</h:form>
 </h:body>
 </html>
