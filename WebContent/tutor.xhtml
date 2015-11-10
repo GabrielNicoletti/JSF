@@ -13,17 +13,17 @@
 <h:body>
 	<h:form>
 	
-		<h:outputText value="#{animal.nome}"></h:outputText>	
-		<h:inputText value="#{animal.nome}">
+		<h:outputText value="#{animalBean.nome}"></h:outputText>	
+		<h:inputText value="#{animalBean.nome}">
 			<f:validator validatorId="emailValidator"></f:validator> </h:inputText>		
 		<br/>
 		
-		<h:selectOneListbox value="#{animal.especie}">
-			<f:selectItems value ="#{animal.especies}"></f:selectItems>
-		</h:selectOneListbox>
+<!-- 		<h:selectOneListbox value="#{animal.especie}"> -->
+<!-- 			<f:selectItems value ="#{animal.especies}"></f:selectItems> -->
+<!-- 		</h:selectOneListbox> -->
 		
-		<h:outputText value="#{animal.nome}"></h:outputText>	
-		<h:inputText value="#{animal.nome}"></h:inputText>
+<!-- 		<h:outputText value="#{animal.nome}"></h:outputText>	 -->
+<!-- 		<h:inputText value="#{animal.nome}"></h:inputText> -->
 			
 <!-- 		<p:outputLabel for="basic" value="SEXO:" />  -->
 <!-- 		<p:selectOneListbox id="basic" value="#{selectOneView.option}"> -->
@@ -36,7 +36,7 @@
         	
 <!-- 		Nome  -->
 <!-- 		<p:inputText  />  -->
-
+		<h:commandButton value="Cadastrar" action="#{vacinaBean.inserir}"></h:commandButton>
 	</h:form>
 </h:body>
 </html>

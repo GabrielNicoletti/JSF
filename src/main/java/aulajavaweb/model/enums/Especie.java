@@ -35,7 +35,7 @@ public enum Especie {
 		return null;
 	}
 	
-	public Especie getByDescription(String description) {
+	public static Especie getByDescription(String description) {
 		for(Especie e : values()) {
 			if(e.description.equalsIgnoreCase(description)) return e;
 		}

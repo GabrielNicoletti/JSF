@@ -21,7 +21,9 @@ public class EmailValidator implements Validator {
 		if(email.indexOf('@') == -1){
 			((UIInput) component).setValid(false);
 			FacesMessage message = new FacesMessage("Email Inválido");
+			message.setSeverity(FacesMessage.SEVERITY_ERROR);
 			context.addMessage(component.getClientId(), message);
+			throw new ValidatorException(message);
 		}
 	}
 

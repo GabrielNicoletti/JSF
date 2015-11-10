@@ -14,10 +14,10 @@
 		</navigation-case>	
 	</navigation-rule> 
 	
-	<lifecycle>
+<!-- 	<lifecycle>
 		<phase-listener>auth.Auth</phase-listener>
 	</lifecycle>
-	
+ -->	
 </faces-config>
 
 

@@ -8,6 +8,7 @@ import aulajavaweb.dao.VacinaDao;
 import aulajavaweb.model.Vacina;
 import aulajavaweb.model.enums.FabricanteVacina;
 import aulajavaweb.model.enums.TipoVacina;
+
 @ManagedBean
 public class VacinaBean  implements Bean<Vacina>{
 	

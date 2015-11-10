@@ -8,7 +8,6 @@ import aulajavaweb.dao.AnimalDao;
 import aulajavaweb.model.Animal;
 
 @ManagedBean
-
 public class AnimalBean implements Bean<Animal> {
 	
 	private Animal animal = new Animal ();	
@@ -52,7 +51,12 @@ public class AnimalBean implements Bean<Animal> {
 		
 	}
 
-
+	public String getNome(){
+		return animal.getNome();
+	}
+	public void setNome(String str){
+		animal.setNome(str);
+	}
 
 }
 	
