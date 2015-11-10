@@ -10,6 +10,7 @@
 </h:head>
 <h:body>
 	<h:form>
+<<<<<<< HEAD
 		<h:outputText for="nome" value="Nome:"/>
 		<h:inputText id="nome" value="#{tutorBean.tutor.nome}"/>
 		<br/>
@@ -58,6 +59,33 @@
 <!--    		</h:dataTable> -->
 		
 		<h:commandButton value="inserir" action="#{tutorBean.inserir}"/>
+=======
+	
+		<h:outputText value="#{animal.nome}"></h:outputText>	
+		<h:inputText value="#{animal.nome}">
+			<f:validator validatorId="emailValidator"></f:validator> </h:inputText>		
+		<br/>
+		
+		<h:selectOneListbox value="#{animal.especie}">
+			<f:selectItems value ="#{animal.especies}"></f:selectItems>
+		</h:selectOneListbox>
+		
+		<h:outputText value="#{animal.nome}"></h:outputText>	
+		<h:inputText value="#{animal.nome}"></h:inputText>
+			
+<!-- 		<p:outputLabel for="basic" value="SEXO:" />  -->
+<!-- 		<p:selectOneListbox id="basic" value="#{selectOneView.option}"> -->
+<!--             	<f:selectItem itemLabel="Macho" itemValue="1" /> -->
+<!--             	<f:selectItem itemLabel="Femea" itemValue="2" /> -->
+<!--             	<f:selectItem itemLabel="São Pauuuuuullooooooooo" itemValue="3" /> -->
+<!--         </p:selectOneListbox> -->
+        
+        
+        	
+<!-- 		Nome  -->
+<!-- 		<p:inputText  />  -->
+
+>>>>>>> 374b73984035e287cc97b323b67bca40ce0ae8f0
 	</h:form>
 </h:body>
 </html>
